@@ -23,7 +23,7 @@
       <a href="#roadmap">Roadmap</a>
       <a href="#chart">Chart</a>
     </nav>
-    <a class="nav-cta" href="https://pump.fun/" target="_blank" rel="noopener">Meet on Pump ↗</a>
+    <a class="nav-cta" href="https://pump.fun/?outputCurrency=DM25MJscJCZ2e6oWNW7C97nR8EXVQE8tad6XUUwhpump" target="_blank" rel="noopener">Meet on Pump ↗</a>
   </header>
 
   <main id="top">
@@ -34,7 +34,7 @@
         <p class="lede">Wide eyes. A cracked heart. Paws already in your face. HATERCAT has arrived, and personal space is officially cancelled.</p>
         <div class="ticker">TICKER <strong>$HATERCAT</strong></div>
         <div class="actions">
-          <a class="button primary" href="https://pump.fun/" target="_blank" rel="noopener">GET $HATERCAT ↗</a>
+          <a class="button primary" href="https://pump.fun/?outputCurrency=DM25MJscJCZ2e6oWNW7C97nR8EXVQE8tad6XUUwhpump" target="_blank" rel="noopener">GET $HATERCAT ↗</a>
           <a class="button secondary" href="#about">Meet the cat ↓</a>
         </div>
       </div>
@@ -100,14 +100,19 @@
     <section class="section chart" id="chart">
       <div class="chart-head">
         <div><p class="section-no">04 / THE LIVE WINDOW</p><h2>Watch the paws.</h2></div>
-        <a href="https://dexscreener.com/" target="_blank" rel="noopener">Open Dexscreener ↗</a>
+        <a href="https://dexscreener.com/solana/DM25MJscJCZ2e6oWNW7C97nR8EXVQE8tad6XUUwhpump" target="_blank" rel="noopener">Open Dexscreener ↗</a>
       </div>
-      <div class="chart-box">
-        <div class="chart-placeholder">
-          <span>HATERCAT MARKET VIEW</span>
-          <strong>CHART GOES HERE</strong>
-          <small>Paste your token's Dexscreener pair URL into this section once launched.</small>
-        </div>
+      <div class="chart-box live-chart-box">
+        <iframe
+          title="HATERCAT live market chart"
+          src="https://dexscreener.com/solana/DM25MJscJCZ2e6oWNW7C97nR8EXVQE8tad6XUUwhpump?embed=1&theme=light&trades=0&info=0"
+          loading="lazy"
+          allow="clipboard-write"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="token-bar">
+        <div><span>CONTRACT ADDRESS</span><code id="ca">DM25MJscJCZ2e6oWNW7C97nR8EXVQE8tad6XUUwhpump</code></div>
+        <button class="copy-ca" type="button" onclick="copyCA()">COPY CA</button>
       </div>
     </section>
 
@@ -116,7 +121,7 @@
       <h2>Come say<br>meow.</h2>
       <p>There is always room for one more.</p>
       <div class="actions">
-        <a class="button primary" href="https://pump.fun/" target="_blank" rel="noopener">GET $HATERCAT ↗</a>
+        <a class="button primary" href="https://pump.fun/?outputCurrency=DM25MJscJCZ2e6oWNW7C97nR8EXVQE8tad6XUUwhpump" target="_blank" rel="noopener">GET $HATERCAT ↗</a>
         <a class="button secondary" href="https://x.com/" target="_blank" rel="noopener">X / TWITTER ↗</a>
       </div>
     </section>
@@ -126,5 +131,15 @@
     <span>HATERCAT</span>
     <span>A LITTLE HATE ON THE INTERNET · $HATERCAT</span>
   </footer>
+<script>
+function copyCA(){
+  const ca = document.getElementById('ca').textContent.trim();
+  navigator.clipboard.writeText(ca).then(()=>{
+    const b=document.querySelector('.copy-ca');
+    const old=b.textContent; b.textContent='COPIED ✓';
+    setTimeout(()=>b.textContent=old,1400);
+  });
+}
+</script>
 </body>
 </html>
